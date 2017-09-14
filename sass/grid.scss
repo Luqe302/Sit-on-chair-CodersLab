@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row::before, .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.row {
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+[class*="col-"] {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding: 0 1rem;
+}
+
+@for $i from 1 to 13 {
+  .col-#{$i} {
+    width: $i / 12 * 100%;
+  }
+}
+
+@media (min-width: 576px) {
+
+    @for $i from 1 to 13 {
+      .col-sm-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    @for $i from 1 to 13 {
+      .col-md-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    @for $i from 1 to 13 {
+      .col-lg-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    @for $i from 1 to 13 {
+      .col-xl-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+
+}

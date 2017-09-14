@@ -1,8 +1,4 @@
+@import "utils";
+@import "reset";
 @import "grid";
-
-$redi: lemon;
-
-body {
-    background-color: $redi;
-    display: flex;
-}
+@import "main";
