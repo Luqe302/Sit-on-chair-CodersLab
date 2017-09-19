@@ -41,6 +41,69 @@ body {
     }
 }
 
+.main-slider {
+
+    .row {
+        padding-top: 3rem;
+        background: #f9f9fa; /* Old browsers */
+        background: -moz-linear-gradient(top, #f9f9fa 66%, #d0cfd7 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #f9f9fa 66%,#d0cfd7 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #f9f9fa 66%,#d0cfd7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9fa', endColorstr='#d0cfd7',GradientType=0 ); /* IE6-9 */
+            }
+
+    .chair-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-sm-6 {
+        display: flex;
+    }
+
+    .slider-desc {
+        display: flex;
+
+        .slider {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+.main-slider {
+
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+
+        span {
+            color: $greenColor;
+        }
+
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    a {
+        padding: 8px;
+        height: 35px;
+        width: 150px;
+        background-color: $greenColor;
+        text-align: center;
+        color: white;
+        margin-bottom: 1.5rem;
+        border-radius: 7px;
+    }
+}
+
+
 //Media
 
 @media (min-width: 600px) {
