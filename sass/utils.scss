@@ -1,3 +1,11 @@
 //Colors
 $greenColor: #24BAA0;
 $blackColor: #161616;
+
+
+@mixin a-button {
+    background-color: $greenColor;
+    text-align: center;
+    color: white;
+    border-radius: 7px;
+}
