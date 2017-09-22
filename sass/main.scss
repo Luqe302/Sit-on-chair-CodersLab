@@ -15,7 +15,7 @@ body {
     .logo {
 
         .logo {
-            color: white;
+            color: $whiteColor;
             cursor: pointer;
 
             span {
@@ -36,7 +36,7 @@ body {
         }
 
         a {
-            color: white;
+            color: $whiteColor;
         }
     }
 }
@@ -124,7 +124,7 @@ body {
             height: 100%;
             width: 100%;
             display: block;
-            background-color: white;
+            background-color: $whiteColor;
             position: absolute;
             left: 0;
             top: 0;
@@ -227,9 +227,11 @@ body {
 
 //Offer options
 .main-prices {
+    padding: 1rem;
 
     .price-plan {
         max-width: 300px;
+        height: 90%;
         border: 1px solid #D6D5D5;
         position: relative;
         background-color: #F9F9F9;
@@ -241,6 +243,7 @@ body {
             color: $greenColor;
             position: relative;
             top: -20px;
+            text-transform: uppercase;
         }
     }
 }
@@ -250,7 +253,7 @@ body {
     position: relative;
     width: 50px;
     height: 50px;
-    background-color: white;
+    background-color: $whiteColor;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -286,6 +289,7 @@ body {
             font-weight: 900;
             font-size: 2rem;
             top: 5px;
+            margin-right: 5px;
         }
         &:nth-of-type(2) {
             color: #C2C2C2;
@@ -305,10 +309,17 @@ body {
 
 .price-plan {
 
+    a {
+        @include a-button;
+        padding: .5rem 1.5rem;
+        margin-bottom: 1rem;
+        position: absolute;
+        bottom: 0;
+    }
+
     .description {
         margin-bottom: 5rem;
         width: 100%;
-
 
         div {
             text-align: center;
@@ -328,11 +339,51 @@ body {
 
 .price-plan {
 
-    a {
-        @include a-button;
-        padding: .5rem 1.5rem;
-        margin-bottom: 1rem;
+    &:hover {
+        background-color: $greenColor;
+        border: $greenColor;
+
+        .out-circle-lrg {
+            background-color: $greenColor;
+            border: 1px solid $greenColor
+        }
+        .out-circle-sml {
+            background-color: #F9F9F9;
+        }
+
+        .in-circle {
+            background-color: $whiteColor;
+            border: $greenColor;
+
+            span {
+                color: $greenColor;
+            }
+        }
+
+        .description {
+            border: 1px solid $greenColor;
+
+            div:nth-of-type(odd) {
+                background-color: #F1F1F1;
+
+            }
+            div:nth-of-type(even) {
+                background-color: #E4E4E4;
+
+            }
+        }
+
+        a {
+            @include a-button;
+            background-color: $whiteColor;
+            color: $greenColor;
+            padding: .5rem 1.5rem;
+            margin-bottom: 1rem;
+            position: absolute;
+            bottom: 0;
+        }
     }
+
 }
 
 
