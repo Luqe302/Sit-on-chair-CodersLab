@@ -205,22 +205,7 @@ body {
     padding-top: 2rem;
 
     h3 {
-        font-size: 1.2rem;
-        color: #898989;
-        display: flex;
-        flex-direction: column;
-        text-transform: uppercase;
-        font-weight: normal;
-
-        &::after {
-            content: "";
-            height: 5px;
-            width: 250px;
-            max-width: 100%;
-            background-color: $greenColor;
-            border-radius: 3px;
-            margin-bottom: 3.5rem;
-        }
+        @include h3-title;
     }
 }
 
@@ -386,6 +371,45 @@ body {
 
 }
 
+//form
+
+.main-form {
+    margin-top: 1rem;
+    padding: 1rem;
+
+    h3 {
+        @include h3-title;
+    }
+}
+
+.inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        width: 500px;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+        font-size: 1.25rem;
+
+        &::placeholder {
+        color: #D0D0D0;
+        }
+    }
+
+    textarea {
+        width: 500px;
+        height: 200px;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+        font-size: 1.25rem;
+        resize: none;
+
+        &::placeholder {
+        color: #D0D0D0;
+        }
+    }
+}
 
 //Media
 

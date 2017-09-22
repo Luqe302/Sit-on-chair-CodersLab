@@ -10,3 +10,22 @@ $whiteColor: #fafafa;
     color: white;
     border-radius: 7px;
 }
+
+@mixin h3-title {
+    font-size: 1.2rem;
+    color: #898989;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    &::after {
+        content: "";
+        height: 5px;
+        width: 250px;
+        max-width: 100%;
+        background-color: $greenColor;
+        border-radius: 3px;
+        margin-bottom: 3.5rem;
+    }
+}
