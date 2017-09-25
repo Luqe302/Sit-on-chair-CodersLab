@@ -7,7 +7,7 @@ $whiteColor: #fafafa;
 @mixin a-button {
     background-color: $greenColor;
     text-align: center;
-    color: white;
+    color: $whiteColor;
     border-radius: 7px;
 }
 

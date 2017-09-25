@@ -387,26 +387,129 @@ body {
     flex-direction: column;
 
     input {
-        width: 500px;
+        max-width: 600px;
+        width: 100%;
         margin-bottom: 1rem;
         line-height: 2rem;
         font-size: 1.25rem;
+        border: 1px solid #C2DBD5;
+        color: #626262;
+        padding-left: .6rem;
 
         &::placeholder {
         color: #D0D0D0;
         }
+
+        &:focus {
+            border: 2px solid #24BA9F;
+            outline: none;
+            color: #626262;
+        }
     }
 
     textarea {
-        width: 500px;
+        max-width: 600px;
+        width: 100%;
         height: 200px;
+        border: 1px solid #C2DBD5;
         margin-bottom: 1rem;
         line-height: 2rem;
         font-size: 1.25rem;
         resize: none;
+        color: #626262;
+        padding-left: .6rem;
 
         &::placeholder {
         color: #D0D0D0;
+        }
+
+        &:focus {
+            border: 2px solid #24BA9F;
+            outline: none;
+            color: #626262;
+        }
+    }
+}
+
+.contact-chair-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+
+    img {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .check {
+        display: flex;
+        max-width: 300px;
+        margin-bottom: 10px;
+
+        input[type="checkbox"]{
+            display: none;
+
+            &[type="checkbox"]:checked + label::before {
+                background-image: url(../images/form_ok.jpg);
+            }
+        }
+
+        label {
+            color: #b1adad;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 48px;
+            height: 40px;
+            border: 1px solid #C1DED9;
+            float: left;
+            margin-right: .4rem;
+            }
+        }
+    }
+    input[type="submit"] {
+        width: 240px;
+        border: none;
+        @include a-button;
+        line-height: 3rem;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5rem;
+    }
+}
+
+.main-footer {
+
+    .bar-wrapper {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footer-rights {
+            color: #b1adad;
+            font-size: .7rem;
+            font-weight: bold;
+        }
+    }
+
+    .footer-social {
+
+        a {
+            margin-right: .2rem;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #b1adad;
+            font-size: .9rem;
+
+            span {
+                color: #5b5858;
+            }
         }
     }
 }
@@ -426,6 +529,25 @@ body {
 
             a {
                 margin-right: 2rem;
+            }
+        }
+    }
+
+    .main-footer {
+
+        .bar-wrapper {
+            flex-direction: row;
+            justify-content: space-around;
+
+            .footer-social {
+                display: flex;
+
+
+
+                p {
+                    align-self: center;
+                    margin-left: 2rem;
+                }
             }
         }
     }
