@@ -29,3 +29,11 @@ $whiteColor: #fafafa;
         margin-bottom: 3.5rem;
     }
 }
+
+@mixin slide-arrow {
+    position: absolute;
+    color: $greenColor;
+    font-size: 2.7rem;
+    cursor: pointer;
+    z-index: 1;
+}

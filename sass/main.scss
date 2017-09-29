@@ -100,6 +100,7 @@ body {
 .main-slider {
 
     .row {
+        position: relative;
         padding-top: 3rem;
         background: #f9f9fa; /* Old browsers */
         background: -moz-linear-gradient(top, #f9f9fa 66%, #d0cfd7 100%); /* FF3.6-15 */
@@ -132,6 +133,22 @@ body {
             align-items: center;
             flex-direction: column;
             justify-content: center;
+        }
+    }
+
+    .slider-arrows {
+        width: 100%;
+        position: absolute;
+        top: 42%;
+
+        .left-arrow {
+            left: 0;
+            @include slide-arrow;
+        }
+
+        .right-arrow {
+            right: 0;
+            @include slide-arrow;
         }
     }
 }
@@ -670,6 +687,22 @@ body {
                     align-self: center;
                     margin-left: 2rem;
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 810px) {
+
+    .main-slider {
+
+        .slider-arrows {
+
+            .left-arrow {
+                left: 2rem
+            }
+            .right-arrow {
+                right: 2rem
             }
         }
     }
