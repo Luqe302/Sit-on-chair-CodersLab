@@ -37,6 +37,13 @@ body {
 
         a {
             color: $whiteColor;
+            position: relative;
+            transition: all .2s;
+            z-index: 2;
+
+            &:hover {
+                color: $greenColor;
+            }
         }
     }
 
@@ -68,6 +75,11 @@ body {
                 a {
                     margin-right: 0;
                     color: $blackColor;
+                    transition: all .2s;
+
+                    &:hover {
+                        color: $greenColor;
+                    }
                 }
             }
 
@@ -643,6 +655,7 @@ body {
                 height: 20px;
                 width: 120px;
                 left: -30%;
+                z-index: 1;
             }
 
             .deploy-menu {
