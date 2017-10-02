@@ -111,6 +111,12 @@ body {
 
 .main-slider {
 
+    .notact {
+        opacity: 0;
+        height: 0;
+        left: -8888px;
+    }
+
     .row {
         position: relative;
         padding-top: 3rem;
@@ -129,6 +135,7 @@ body {
             width: 100%;
             align-self: center;
         }
+
     }
 
     .col-sm-6 {
@@ -153,14 +160,22 @@ body {
         position: absolute;
         top: 42%;
 
+        .both-arrow {
+            @include slide-arrow;
+            padding: 10px;
+            transition: all .3s;
+
+            &:hover {
+                color: #71e8d3;
+            }
+        }
+
         .left-arrow {
             left: 0;
-            @include slide-arrow;
         }
 
         .right-arrow {
             right: 0;
-            @include slide-arrow;
         }
     }
 }
