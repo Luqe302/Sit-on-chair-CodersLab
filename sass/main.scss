@@ -111,6 +111,11 @@ body {
 
 .main-slider {
 
+    .slide-1, .slide-2 {
+        opacity: 1;
+        transition: all 2s;
+    }
+
     .notact {
         opacity: 0;
         height: 0;
